@@ -1,4 +1,3 @@
-// api.js
 import useSWR from "swr";
 import { fetcher } from "./fetcher";
 
