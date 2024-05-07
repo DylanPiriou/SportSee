@@ -1,18 +1,20 @@
 import useSWR from "swr";
 import { fetcher } from "./fetcher";
 
+const url = "http://localhost:3000/user/12";
+
 export function useUserData() {
-	return useSWR("http://localhost:3000/user/12", fetcher);
+	return useSWR(url, fetcher);
 }
 
 export function useUserActivity() {
-	return useSWR("http://localhost:3000/user/12/activity", fetcher);
+	return useSWR(`${url}/activity`, fetcher);
 }
 
 export function useAverageSessions() {
-	return useSWR("http://localhost:3000/user/12/average-sessions", fetcher);
+	return useSWR(`${url}/average-sessions`, fetcher);
 }
 
 export function usePerformance() {
-	return useSWR("http://localhost:3000/user/12/performance", fetcher);
+	return useSWR(`${url}/performance`, fetcher);
 }
