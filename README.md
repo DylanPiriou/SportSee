@@ -1,6 +1,6 @@
-# Project Title
+# SportSee
 
-Develop an analytics dashboard with React
+Develop an analytics dashboard with React.
 
 ## Description
 
@@ -23,13 +23,17 @@ Clone the project
   git clone https://github.com/DylanPiriou/SportSee
 ```
 
-Go to the project directory
+Start backend
 
 ```bash
   cd backend
   yarn install
   yarn dev
+```
 
+Start frontend
+
+```bash
   cd frontend
   yarn install
   yarn dev
