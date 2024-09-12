@@ -4,8 +4,9 @@ import Sidebar from "./components/Sidebar";
 import Homepage from "./pages/Homepage";
 
 function App() {
+	
 	return (
-		<main className="w-[100vw]">
+		<main>
 			<Header />
 			<Sidebar />
 			<Homepage />

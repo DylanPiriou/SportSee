@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-* {
+*{
 	min-width: 0;
 	font: inherit;
 	font-family: "Roboto", sans-serif;
@@ -15,7 +15,7 @@
 img,
 video,
 svg {
-	dispaly: block;
+	display: block;
 	height: auto;
 	max-width: 100%;
 }
@@ -23,6 +23,7 @@ svg {
 body {
 	margin: 0;
 	min-height: 100dvh;
+	max-width: 1920px;
 	overflow: hidden;
 }
 
