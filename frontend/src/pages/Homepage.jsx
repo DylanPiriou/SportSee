@@ -4,14 +4,14 @@ import Statistics from "../layouts/Statistics";
 import { useUserData } from "../utils/API";
 
 export default function Homepage() {
-	const {
-		data,
-		isLoading,
-		error,
-	} = useUserData();
+
+	/**
+	 * Get user data with destructuring method - return 3 values : data, isLoading, error
+	 */
+	const { data, isLoading, error } = useUserData();
 
 	return (
-		<div className="pl-28 pt-28 w-full h-[100vh] flex flex-col items-left justify-center bg-white">
+		<div className="w-full h-[100dvh] pt-24 pb-14 pl-24 flex flex-col items-left justify-center bg-white">
 			{data === undefined ? (
 				<p className="text-center">Impossible de récupérer les données</p>
 			) : (
