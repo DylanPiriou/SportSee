@@ -13,7 +13,7 @@ export default function Homepage() {
 	return (
 		<div className="w-full h-[100dvh] pt-24 pb-14 pl-24 flex flex-col items-left justify-center bg-white">
 			{data === undefined ? (
-				<p className="text-center">Impossible de récupérer les données</p>
+				<p className="text-center">Impossible de récupérer les données. Veuillez réesayer.</p>
 			) : (
 				<>
 					<Heading data={data} isLoading={isLoading} error={error} />

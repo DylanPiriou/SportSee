@@ -9,23 +9,14 @@ import {
 	USER_AVERAGE_SESSIONS,
 	USER_PERFORMANCE,
 } from "./data";
+import { getMockData } from "./getMockData";
 
-// Set to true to use mock data
-const useMockData = true;
-
-// Get the mock data depending of the id
-function getMockData(id, data) {
-	const userData = data.find((user) => user.id === parseInt(id));
-	if (!userData) {
-		throw new Error(`No user found with id ${id}`);
-	}
-	return { data: userData };
-}
+// Set to true to use mock data (from .env file)
+const useMockData = import.meta.env.VITE_REACT_APP_USE_MOCK_DATA === "true";
+// Get user id from .env file
+const id = import.meta.env.VITE_REACT_APP_USER_ID;
 
 export const fetcher = (url) => {
-	// Get the user id from the url
-	const id = url.split("/")[4];
-
 	if (useMockData) {
 		if (url.includes("/performance")) {
 			const data = getMockData(id, USER_PERFORMANCE);
