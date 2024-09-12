@@ -1,5 +1,5 @@
 import React from "react";
-import KeysInfos from "../components/charts/KeysInfos";
+import KeysInfos from "../components/KeysInfos";
 import ObjectifScore from "../components/charts/ObjectifScore";
 import Activity from "../components/charts/Activity";
 import {
@@ -12,6 +12,9 @@ import Performance from "../components/charts/Performance";
 import SessionsDuration from "../components/charts/SessionsDuration";
 
 export default function Statistics() {
+	/**
+	 * Get data with destructuring method - return 3 values : data, isLoading, error
+	 */
 	const {
 		data: userData,
 		isLoading: userLoading,
@@ -33,17 +36,21 @@ export default function Statistics() {
 		error: performanceError,
 	} = usePerformance();
 
+	/**
+	 * Display the data
+	 */
+
 	return (
-		<div className="w-full h-full flex-1 grid grid-cols-4 items-start justify-center px-28 pb-16 gap-6">
-			<div className="col-span-3 flex flex-col h-full gap-6">
-				<div className="flex-1 w-full flex items-center justify-center">
+		<div className="flex justify-between h-full w-full !max-h-[600px] max-w-[1350px] px-7 xl:px-20 pt-20 xl:gap-32">
+			<div className="flex flex-col flex-1 gap-6">
+				<div className="w-full h-1/2 flex items-center justify-center">
 					<Activity
 						data={activityData}
 						isLoading={activityLoading}
 						error={activityError}
 					/>
 				</div>
-				<div className="w-full flex-1 grid grid-cols-3 gap-6">
+				<div className=" flex-1 w-full h-1/2 flex gap-3 xl:gap-6">
 					<SessionsDuration
 						data={sessionsData}
 						isLoading={sessionsLoading}
