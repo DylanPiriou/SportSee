@@ -9,7 +9,7 @@ import useSWR from "swr";
 
 export default function KeysInfos({ data, isLoading, error }) {
 	return (
-		<ul className="h-full w-fit flex flex-col items-start justify-start gap-14">
+		<ul className="h-full w-fit flex lg:flex-col max-lg:flex-wrap items-start justify-start gap-6 lg:gap-14">
 			{isLoading && <p>Chargement...</p>}
 			{error && <p>Une erreur est survenue</p>}
 			{data &&

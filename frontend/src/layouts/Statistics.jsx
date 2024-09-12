@@ -41,7 +41,7 @@ export default function Statistics() {
 	 */
 
 	return (
-		<div className="flex justify-between h-full w-full !max-h-[600px] max-w-[1350px] px-7 xl:px-20 pt-20 xl:gap-32">
+		<div className="flex max-lg:flex-col justify-between h-full w-full max-w-[1350px] px-7 xl:px-20 pt-20 max-lg:gap-6 xl:gap-32">
 			<div className="flex flex-col flex-1 gap-6">
 				<div className="w-full h-1/2 flex items-center justify-center">
 					<Activity
