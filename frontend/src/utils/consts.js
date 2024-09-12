@@ -1,3 +1,7 @@
+/**
+ * Consts to help precessing data
+*/
+
 export const days = {
 	1: "L",
 	2: "M",

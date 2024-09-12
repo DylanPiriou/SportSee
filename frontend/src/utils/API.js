@@ -1,7 +1,13 @@
+/**
+ * API Endpoints for charts using SWR
+*/
+
 import useSWR from "swr";
 import { fetcher } from "./fetcher";
 
-const url = "http://localhost:3000/user/12";
+
+const id = 12;
+const url = `http://localhost:3000/user/${id}`;
 
 export function useUserData() {
 	return useSWR(url, fetcher);
